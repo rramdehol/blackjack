@@ -1,2 +1,9 @@
 #BlackJack Game 
 ## Made with JS, jqeury, Bootstrap, CSS
+Layout:
+Create an element for our table. Turn it green, and give it a white border.
+Create an element for the dealer's hand and for the player's hand.
+Create an element for the dealer's total and the player's total.
+Create an element for each card in each hand, a maximum of 6 cards. 
+Assign a generic class to each card and a unique class to each card so we style and target 
+Make a Deal, hit, and stand button
