@@ -7,9 +7,10 @@
 	<!-- Link TO Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="../CSS/blackjack.css">
 	<!-- Link To JQuery -->
-	<link rel="stylesheet" type="text/css" href="../JS/jquery.min.js">
+	<script type="text/javascript" src ="../JS/jquery.min.js"></script>
 	<!-- Link to Custom JavaScript -->
-	<link rel="stylesheet" type="text/css" href="../JS/blackjack.js">
+	<script type="text/javascript" src="../JS/blackjack.js"></script>
+
 </head>
 <!-- Layout:
 Create an element for our table. Turn it green, and give it a white border.
@@ -23,42 +24,55 @@ Make a Deal, hit, and stand button -->
 		<div class="row">
 			<!-- THE TABLE ELEMENT -->
 			<div class="the-table col-sm-8 col-sm-offset-2">
-				<!-- THE DEALER ELEMENT -->
-				<div class="col-sm-12 dealer-hand-wrapper">
-					<!-- Delaer TOTAL -->
-					<div class="col-sm-3 dealer-total">
-						<!-- DEALER TOTAL -->
-						Dealer Total <span class="dealer-total-number">0</span>
-					</div>
-					<div class="col-sm-9 dealer-cards">
-						<div class="col-sm-2 card card-one"></div>
-						<div class="col-sm-2 card card-two"></div>
-						<div class="col-sm-2 card card-three"></div>
-						<div class="col-sm-2 card card-four"></div>
-						<div class="col-sm-2 card card-five"></div>
-						<div class="col-sm-2 card card-six"></div>
+				<div class="row">
+					<!-- THE DEALER ELEMENT -->
+					<div class="col-sm-12 dealer-hand-wrapper">
+						<!-- Delaer TOTAL -->
+						<div class="col-sm-2 dealer-total">
+							<!-- DEALER TOTAL -->
+							Dealer Total <span class="dealer-total-number">0</span>
+						</div>
+						<div class="col-sm-10 dealer-cards">
+							<div class="col-sm-2 card card-one"></div>
+							<div class="col-sm-2 card card-two"></div>
+							<div class="col-sm-2 card card-three"></div>
+							<div class="col-sm-2 card card-four"></div>
+							<div class="col-sm-2 card card-five"></div>
+							<div class="col-sm-2 card card-six"></div>
+						</div>
 					</div>
 				</div>
-			</div>	
-		</div>	
-		<div class="row">
+				<div class="row">
 			<!-- THE PLAYER ELEMENT -->
-			<div class="col-sm-12 player-hand-wrapper">
-				<!-- Player TOTAL -->
-				<div class="col-sm-3 player-total">
-					<!-- Player TOTAL -->
-					Dealer Total <span class="player-total-number">0</span>
+					<div class="col-sm-12 player-hand-wrapper">
+						<!-- Player TOTAL -->
+						<div class="col-sm-2 player-total">
+							<!-- Player TOTAL -->
+							Player Total <span class="player-total-number">0</span>
+						</div>
+						<div class="col-sm-10 player-cards">
+							<div class="col-sm-2 card card-one"></div>
+							<div class="col-sm-2 card card-two"></div>
+							<div class="col-sm-2 card card-three"></div>
+							<div class="col-sm-2 card card-four"></div>
+							<div class="col-sm-2 card card-five"></div>
+							<div class="col-sm-2 card card-six"></div>
+						</div>
+					</div>
 				</div>
-				<div class="col-sm-9 player-cards">
-					<div class="col-sm-2 card card-one"></div>
-					<div class="col-sm-2 card card-two"></div>
-					<div class="col-sm-2 card card-three"></div>
-					<div class="col-sm-2 card card-four"></div>
-					<div class="col-sm-2 card card-five"></div>
-					<div class="col-sm-2 card card-six"></div>
+				<div class="row">
+					<div class="col-sm-2 col-smoffset-2">
+						<button class="deal-button">Deal</button>
+					</div>
+					<div class="col-sm-2 col-smoffset-1">
+						<button class="hit-button">Hit</button>
+					</div>
+					<div class="col-sm-2 col-smoffset-1">
+						<button class="stand-button">Stand</button>
+					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 </body>
 </html>

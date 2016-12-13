@@ -1,3 +1,4 @@
+
 .the-table{
 	background-color: #277714;
 	border: 5px solid #663300;
@@ -10,4 +11,5 @@
 	background-color: #ffffff;
 	color: black;
 	margin: 10px;
+	width: 60px;
 }
