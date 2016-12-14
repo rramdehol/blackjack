@@ -49,12 +49,13 @@ console.log(theDeck);
 	// Listen for the click 
 	$(".hit-button").click(function(){
 		// console.dir(this);
-		hitCard();
+		hitCard("player", playersHand);
 	});
 	// GET THE STAY WORKING
 	// Listen for the click
 	$(".stand-button").click(function(){
 		// console.dir(this);
+		hitCard("dealer", dealersHand);
 	});
 function createDeck(){
 	// Fill the deck with 52 cards 4suits (h,s,d,c) 
@@ -101,30 +102,22 @@ function calculateTotal(who, theirHand){
 		if(cardValue > 10){
 			cardValue = 10;
 		}
-		else{
-		// console.log(cardValue);
+		if((cardValue === 1)&&(total <11)){
+			cardValue = 11;
 		}
 	total += cardValue;
 	}
 	var classToTarget = "."+who+"-total-number";
 	$(classToTarget).text(total);
 }
-function hitCard(){
 
-	playersHand.push(theDeck[0]);
+function hitCard(who, theirHand){
+
+	theirHand.push(theDeck[0]);
 	theDeck.shift(0);
-	calculateTotal("player",playersHand)
-	// console.log("After Hit " +theDeck);
-	// console.log("After Hit Dealers Hand" +dealersHand);
-	console.log("After Hit Players Hand" +playersHand);
-	dealersHand.push(theDeck[0]);
-	theDeck.shift(0);
-	calculateTotal("dealer",dealersHand)
-	// console.log("After Hit " +theDeck);
-	console.log("After Hit Dealers Hand" +dealersHand);
-	// console.log("After Hit Players Hand" +playersHand);
-	// console.log("this is the hit card "+theDeck[4]);
-	// placeCard();
+	calculateTotal(who,theirHand)
+	console.log("After Hit  Hand" +theirHand);
+
 }
 
 });
