@@ -7,7 +7,6 @@ var dealersHand =[];
 
 
 
-
 console.log(theDeck);
 	// GET THE DEAL WORKING 
 	// Listen for the click
@@ -17,13 +16,22 @@ console.log(theDeck);
 		createDeck(); 
 		shuffleDeck();
 		// Add card 0, to the playersHand
+		console.log(theDeck);
 		playersHand.push(theDeck[0]);
+		theDeck.shift(0);
+		
 		// Add card 1 to the dealers hand
-		dealersHand.push(theDeck[1]);
+		dealersHand.push(theDeck[0]);
+		theDeck.shift(0);
 		// Add card 2 to the players hand
-		playersHand.push(theDeck[2]);
+		playersHand.push(theDeck[0]);
+		theDeck.shift(0);
 		// Add card 3 to the dealers hand
-		dealersHand.push(theDeck[3]);
+		dealersHand.push(theDeck[0]);
+		theDeck.shift(0);
+		console.log("After Deal " +theDeck);
+		console.log("After Deal Dealers Hand" +dealersHand);
+		console.log("After Deal Players Hand" +playersHand);
 		// Put the first card in the players hand
 		placeCard(playersHand[0], "player","one");
 		// Put the second card in the players hand
@@ -41,6 +49,7 @@ console.log(theDeck);
 	// Listen for the click 
 	$(".hit-button").click(function(){
 		// console.dir(this);
+		hitCard();
 	});
 	// GET THE STAY WORKING
 	// Listen for the click
@@ -56,7 +65,7 @@ function createDeck(){
 			theDeck.push(c+suits[s]);
 		}
 	}
-	console.log(theDeck);
+	// console.log(theDeck);
 }
 
 function shuffleDeck(){
@@ -75,25 +84,47 @@ function shuffleDeck(){
 	// var temp = theDeck[3];
 	// theDeck[3] = theDeck[41];
 	// theDeck[41] = temp;
-	console.log(theDeck);
+	// console.log(theDeck);
 }
 
 function placeCard(whatCard, who, whichSlot){
 	var classToTarget = "."+who+"-cards .card-"+whichSlot;
-	console.log(classToTarget);
+	// console.log(classToTarget);
 	$(classToTarget).html('<img src= "../cards/' +whatCard+ '.png">');
 }
 
 function calculateTotal(who, theirHand){
-	var total = 0;
 	var cardValue;
+	var total = 0;
 	for(let i=0;i<theirHand.length;i++){
 		cardValue = Number(theirHand[i].slice(0,-1));
-		console.log(cardValue);
-		total += cardValue;
+		if(cardValue > 10){
+			cardValue = 10;
+		}
+		else{
+		// console.log(cardValue);
+		}
+	total += cardValue;
 	}
 	var classToTarget = "."+who+"-total-number";
 	$(classToTarget).text(total);
+}
+function hitCard(){
+
+	playersHand.push(theDeck[0]);
+	theDeck.shift(0);
+	calculateTotal("player",playersHand)
+	// console.log("After Hit " +theDeck);
+	// console.log("After Hit Dealers Hand" +dealersHand);
+	console.log("After Hit Players Hand" +playersHand);
+	dealersHand.push(theDeck[0]);
+	theDeck.shift(0);
+	calculateTotal("dealer",dealersHand)
+	// console.log("After Hit " +theDeck);
+	console.log("After Hit Dealers Hand" +dealersHand);
+	// console.log("After Hit Players Hand" +playersHand);
+	// console.log("this is the hit card "+theDeck[4]);
+	// placeCard();
 }
 
 });
