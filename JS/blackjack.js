@@ -55,6 +55,7 @@ console.log(theDeck);
 	// Listen for the click
 	$(".stand-button").click(function(){
 		// console.dir(this);
+		var player
 		hitCard("dealer", dealersHand);
 	});
 function createDeck(){
