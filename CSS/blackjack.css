@@ -1,4 +1,5 @@
-
+/* Text center centers me internally 
+Margin Auto center me inside of my parent */
 .the-table{
 	background-color: #277714;
 	border: 5px solid #663300;
@@ -8,8 +9,39 @@
 }
 .card{
 	height: 120px;
-	background-color: #ffffff;
+	background-color: #277714;
+	/* border-radius: 5px; */
 	color: black;
 	margin: 10px;
-	width: 60px;
+	width: 12.6%;
+	float: left;
+}
+.card img{
+	height: 100%;
+	width: 100%;
+}
+
+.dealcard-1{
+	animation: cardDealing 100s;
+}
+
+button{
+	margin: auto;
+	text-align: center;
+}
+
+
+/* CARD ANIMATIONS */
+@keyframes cardDealing{
+	0%{transform: translateY(100px) }
+	10%{transform: translate(100px, 100px) skew(5deg, 5deg)}
+	20%{transform: translate(200px, 500px)}
+	30%{transform: translate(300px, 100px) skew(5deg, 5deg)}
+	40%{}
+	50%{}
+	60%{}
+	70%{}
+	80%{}
+	90%{}
+	100%{}
 }
