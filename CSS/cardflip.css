@@ -1,0 +1,90 @@
+/* PARENT CHILD EXAMPLE  */
+#parent{
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    perspective: 200px;  /*adds depth to a 2D element*/
+    transition:  all 3s;
+
+}
+
+#threeDChild{
+    border: 5px solid blue;
+    transform: rotateY(45deg);
+    transform: rotateX(60deg); /*like a paper falling over*/
+    transition: all 2s;
+    height: 180px;
+    width: 180px;
+}
+
+#parent.flip{
+    perspective: 100px;
+}
+
+#threeDChild.flip{
+    transform: rotateY(45deg); 
+    border: solid red;
+
+
+
+
+
+/* FLIP CARD */
+}
+.card{
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    perspective: 300px;
+}
+/* THe child that can play 3D, and is holding the 2 card faces */
+.face-holder{
+    height: 300px;
+    width: 300px;
+    position: relative; /* the children of face-holder will be absolute*/
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+/* The actual face of the card and the face of the back.they need a 3D space */
+/* These rules apply for both */
+.card-front, .card-back{
+    /* give them aboslute position so they are on top of eachother */
+    position:  absolute;
+    top: 0;
+    left: 0;
+    border: 2px red solid;
+    /* DO NOT SHOW THE BACK OF THE DIV */
+    backface-visibility: hidden;
+}
+
+/* These rules apply for each individually */
+.card-front{
+    transform: rotateY(180deg);
+}
+.card-back{
+
+}
+.flip{
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

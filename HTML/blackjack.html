@@ -19,7 +19,7 @@ Create an element for the dealer's total and the player's total.
 Create an element for each card in each hand, a maximum of 6 cards. 
 Assign a generic class to each card and a unique class to each card so we style and target 
 Make a Deal, hit, and stand button -->
-<body>
+<body id= "background">
 	<div class="container">
 		<div class="row">
 			<!-- THE TABLE ELEMENT -->
@@ -60,8 +60,11 @@ Make a Deal, hit, and stand button -->
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-2 col-smoffset-2">
+				<div class="row button-row">
+					<div class="col-sm-2 col-smoffset-1 card">
+						<img src="../cards/deck.png" alt="">
+					</div>
+					<div class="col-sm-2 col-smoffset-6">
 						<button class="deal-button">Deal</button>
 					</div>
 					<div class="col-sm-2 col-smoffset-1">

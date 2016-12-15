@@ -1,15 +1,25 @@
 /* Text center centers me internally 
 Margin Auto center me inside of my parent */
+#background{
+	background-image: url("../casinobackground.jpg");
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	background-size: 100% auto;
+	animation: animatedBackground 40s linear infinite;
+}
 .the-table{
-	background-color: #277714;
+	background-color: #191970;
 	border: 5px solid #663300;
 	border-radius: 10px;
 	margin-top: 50px;
 	padding: 30px 0px;
+	transform: perspective(1200px) rotateX(36deg);
+	border-radius: 10%;
 }
 .card{
 	height: 120px;
-	background-color: #277714;
+	/* Make this transparent so it doesnt interfere with cards */
+	background-color: transparent;
 	/* border-radius: 5px; */
 	color: black;
 	margin: 10px;
@@ -22,15 +32,22 @@ Margin Auto center me inside of my parent */
 }
 
 .dealcard-1{
-	animation: cardDealing 100s;
+	animation: cardDealing 5s;
 }
 
 button{
 	margin: auto;
 	text-align: center;
 }
+.button-row{
+	text-align: center;
+}
+.player-total, .dealer-total{
+	color: white;
+}
 
 
+/* ANIMATIONS */
 /* CARD ANIMATIONS */
 @keyframes cardDealing{
 	0%{transform: translateY(100px) }
@@ -44,4 +61,10 @@ button{
 	80%{}
 	90%{}
 	100%{}
+}
+
+/* BACKGROUND ANIMATIONS */
+@keyframes animatedBackground{
+	0%{background-position: 0 0;}
+	100%{background-position: 100% 0;}
 }

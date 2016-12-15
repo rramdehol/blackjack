@@ -148,6 +148,11 @@ function calculateTotal(hand, who){
 		}
 		total += cardValue;
 	}
+	for(let i=0;i<aceCounter;i++){
+		if(total > 21){
+			total -= 10;
+		}
+	}
 	// console.log(total);
 	var classSelector = "."+who+"-total-number";
 	$(classSelector).html(total);
