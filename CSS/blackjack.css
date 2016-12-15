@@ -15,6 +15,7 @@ Margin Auto center me inside of my parent */
 	padding: 30px 0px;
 	transform: perspective(1200px) rotateX(36deg);
 	border-radius: 10%;
+	box-shadow: 0px 0px 200px 0px black;
 }
 .card{
 	height: 120px;
@@ -29,6 +30,8 @@ Margin Auto center me inside of my parent */
 .card img{
 	height: 100%;
 	width: 100%;
+	/* CARD SHADOW */
+	box-shadow: 0px 0px 25px 0px black;
 }
 
 .dealcard-1{
@@ -38,6 +41,7 @@ Margin Auto center me inside of my parent */
 button{
 	margin: auto;
 	text-align: center;
+	border-radius: 50%;
 }
 .button-row{
 	text-align: center;
@@ -45,17 +49,19 @@ button{
 .player-total, .dealer-total{
 	color: white;
 }
-
+.button-row{
+	margin-top: 100px;
+}
 
 /* ANIMATIONS */
 /* CARD ANIMATIONS */
 @keyframes cardDealing{
-	0%{transform: translateY(100px) }
+	0%{transform: translate(50px, 700px) }
 	10%{transform: translate(100px, 100px) skew(5deg, 5deg)}
 	20%{transform: translate(200px, 500px)}
 	30%{transform: translate(300px, 100px) skew(5deg, 5deg)}
-	40%{}
-	50%{}
+	40%{transform: rotateY(180deg)}
+	50%{transform: rotateX(180deg)}
 	60%{}
 	70%{}
 	80%{}
