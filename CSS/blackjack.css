@@ -1,11 +1,11 @@
 /* Text center centers me internally 
 Margin Auto center me inside of my parent */
-#background{
+body{
 	background-image: url("../casinobackground.jpg");
 	background-position: 0px 0px;
 	background-repeat: repeat-x repeat-y;
-	background-size: 100% auto;
-	animation: animatedBackground 200s linear infinite;
+	/* background-size: 100% auto; */
+	animation: animatedBackground 300s linear infinite;
 	width: 100%;
 	height: 100%;
 }
@@ -73,7 +73,7 @@ button{
 
 /* BACKGROUND ANIMATIONS */
 @keyframes animatedBackground{
-	0%{background-position: 0% -10000%;}
+	0%{background-position: 0% -1000%;}
 	/* 50%{background-position: 0% 50%;} */
-	100%{background-position: 0% 10000%;}
+	100%{background-position: 0% 1000%;}
 }
